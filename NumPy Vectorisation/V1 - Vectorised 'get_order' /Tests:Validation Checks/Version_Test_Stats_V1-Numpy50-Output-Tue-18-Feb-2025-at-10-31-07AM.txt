@@ -1,0 +1,11 @@
+# NEW VERSION PERFORMANCE VALIDATION RESULTS
+This is a test to check that a new modified version of the Lebwohl-Lasher code still
+ works correctly and produces comparable outputs to the original program
+#=======================================================================================
+# REDUCED ENERGY:
+Original Code: Mean = -7225.22, SD = 1156.889, Range = (-8043.229, -2476.6035)
+New Version: Mean = -7225.79, SD = 1177.283, Range = (-8068.7387, -2393.4553)
+
+# ORDER PARAMETER:
+Original Code: Mean = 0.34, SD = 0.033, Range = (0.2523, 0.3928)
+New Version: Mean = 0.32, SD = 0.038, Range = (0.258, 0.3745)
