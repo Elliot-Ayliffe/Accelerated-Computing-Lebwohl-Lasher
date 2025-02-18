@@ -9,6 +9,12 @@
 # 3. 'get_order'
 # 4. 'MC_step'
 
+# VERSION 2 CHANGES:
+# cache=True was added to the numba prompt for each function
+# @numba.jit(nopython=True, cache=True)
+# This significantly accelerates the program after running it once to allow data to be stored in cache.
+
+
 """
 Basic Python Lebwohl-Lasher code.  Based on the paper 
 P.A. Lebwohl and G. Lasher, Phys. Rev. A, 6, 426-429 (1972).
@@ -142,7 +148,7 @@ def savedat(arr,nsteps,Ts,runtime,ratio,energy,order,nmax):
 #=======================================================================
 
 # Add Numba prompt for the 'one_energy' function 
-@numba.jit(nopython=True)
+@numba.jit(nopython=True, cache=True)
 def one_energy(arr,ix,iy,nmax):
     """
     Arguments:
@@ -179,7 +185,7 @@ def one_energy(arr,ix,iy,nmax):
 #=======================================================================
 
 # Add Numba prompt for the 'all_energy' function
-@numba.jit(nopython=True)
+@numba.jit(nopython=True, cache=True)
 def all_energy(arr,nmax):
     """
     Arguments:
@@ -199,7 +205,7 @@ def all_energy(arr,nmax):
 #=======================================================================
 
 # Add Numba prompt for the 'get_order' function
-@numba.jit(nopython=True)
+@numba.jit(nopython=True, cache=True)
 def get_order(arr,nmax):
     """
     Arguments:
@@ -230,7 +236,7 @@ def get_order(arr,nmax):
 #=======================================================================
 
 # Add Numba prompt for the 'MC_step' function
-@numba.jit(nopython=True)
+@numba.jit(nopython=True, cache=True)
 def MC_step(arr,Ts,nmax):
     """
     Arguments:
