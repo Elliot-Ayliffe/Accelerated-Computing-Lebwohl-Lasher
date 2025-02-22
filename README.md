@@ -28,19 +28,33 @@ All programs for this project were ran using HPC on Blue Crystal 4 through a sub
 **Command Line Usage**
 
 Original, NumPy Vectorised, and Numba (including parallel) versions:
-`$ python <filename> <ITERATIONS> <LATTICE SIZE> <TEMPERATURE> <PLOTFLAG>`
+
+```
+$ python <filename> <ITERATIONS> <LATTICE SIZE> <TEMPERATURE> <PLOTFLAG>
+```
 
 Cython (non parallel) versions, first compile the program by running the setup script followed by the run script:
-`$ python <setup script filename> build_ext -fi`
-`$ python <run script filename> <ITERATIONS> <LATTICE SIZE> <TEMPERATURE> <PLOTFLAG>`
+
+```
+$ python <setup script filename> build_ext -fi
+```
+```
+$ python <run script filename> <ITERATIONS> <LATTICE SIZE> <TEMPERATURE> <PLOTFLAG>
+```
 
 Parallel Cython runs the setup file in the same way but inlcudes an additional argument for the run script. The number of threads were also specified in the slurm file:
-`$ python <parallel run script> <ITERATIONS> <LATTICE SIZE> <TEMPERATURE> <PLOTFLAG> <NUM THREADS>`
+
+```
+$ python <parallel run script> <ITERATIONS> <LATTICE SIZE> <TEMPERATURE> <PLOTFLAG> <NUM THREADS>
+```
 
 Parallel Numba versions were run once before timings were recorded to allow cache to store memory. The number of threads were specified in the slurm file.
 
 MPI (mpi4py) versions:
-`$ mpiexec -n <NUM PROCESSES/WORKERS> python <mpi script filename> <ITERATIONS> <LATTICE SIZE> <TEMPERATURE> <PLOTFLAG>`
+
+```
+$ mpiexec -n <NUM PROCESSES/WORKERS> python <mpi script filename> <ITERATIONS> <LATTICE SIZE> <TEMPERATURE> <PLOTFLAG>
+```
 
 
 
