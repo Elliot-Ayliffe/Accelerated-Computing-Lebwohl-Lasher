@@ -1,0 +1,7 @@
+mpi4py_original.py: Size: 10, Steps: 50, T*: 0.500: Order: 0.862, Time: 0.160517 s
+mpi4py_original.py: Size: 20, Steps: 50, T*: 0.500: Order: 0.482, Time: 0.596262 s
+mpi4py_original.py: Size: 50, Steps: 50, T*: 0.500: Order: 0.286, Time: 3.605120 s
+mpi4py_original.py: Size: 100, Steps: 50, T*: 0.500: Order: 0.303, Time: 15.075905 s
+mpi4py_original.py: Size: 150, Steps: 50, T*: 0.500: Order: 0.286, Time: 32.493668 s
+mpi4py_original.py: Size: 250, Steps: 50, T*: 0.500: Order: 0.269, Time: 91.421579 s
+mpi4py_original.py: Size: 500, Steps: 50, T*: 0.500: Order: 0.253, Time: 363.853396 s
