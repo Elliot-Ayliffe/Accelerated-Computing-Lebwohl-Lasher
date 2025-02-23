@@ -9,7 +9,11 @@ Each method/ version of the program has its own folder containing:
 - The modified version of the script (e.g. numba_no_vectorisation.py)
 - Set up and run scripts (for building and running cython versions)
 - **'Outputs'**: Folder containing output files (times and parameter values)
-- **'Tests & Validation Checks':** Folder containing plots and statisitcs used to verify that each modified version still works correctly and produces the expected results. These plots and stats are produced by running the script **'Testing_strategy_Script.py'**
+- **'Tests & Validation Checks':** Folder containing plots and statisitcs used to verify that each modified version still works correctly and produces the expected results. These plots and stats are produced by running the script **'Testing_strategy_Script.py'** using the command:
+```
+python Testing_Strategy_Script.py <original_code_output_file.txt> <new_version_output_file.txt>
+```
+
 - Profiling file detailing which functions are doing the most work in the program (e.g. prof_V1_NUmba.txt)
 
 The **'Scaling Tests'** folder investigates how each method/version scales with the size of the model and number of threads (for parallelised versions). It contains:
